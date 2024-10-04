@@ -84,8 +84,8 @@ const Product = () => {
           <p className='border px-5 py-3 text-sm'>Reviews (3)</p>
         </div>
         <div className='flex flex-col gap-4 border px-6 py-6 text-sm text-gray-500 '>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, eius explicabo? Culpa, perspiciatis hic in consequatur, provident nemo porro ex mollitia vero amet consectetur? Voluptates unde tempore at fugiat quasi?</p>
-          <p>E-commerce website Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt adipisci harum ad, dolorem veritatis id, sunt explicabo molestias corrupti, in unde perferendis ducimus deserunt reiciendis accusamus necessitatibus commodi voluptatem provident!</p>
+          <p>Discover the Elegant clothing from <strong>Naza Collection</strong> Naza Collection, a perfect blend of sophistication and timeless design.</p>
+          <p>The material showcases an intricate design that adds a touch of elegance to any outfit, whether you're dressing up for a special occasion or adding flair to your everyday look.</p>
         </div>
       </div>
 

@@ -8,7 +8,7 @@ export const ShopContext = createContext();
 
 const ShopContextProvider = (props) => {
 
-  const currency = "$";
+  const currency = "€";
   const delivery_fee = 10;
   const backendUrl = import.meta.env.VITE_BACKEND_URL;
   const [search, setSearch] = useState("");
@@ -137,7 +137,7 @@ const ShopContextProvider = (props) => {
     try {
 
       const response = await axios.post(`${backendUrl}/api/cart/get`, {}, {headers: {token}});
-  
+
       if(response.data.success){
         setCartItems(response.data.cartData);
       }else{
