@@ -19,14 +19,17 @@ const ShopContextProvider = (props) => {
   const [token, setToken] = useState("");
 
 
+
+
   const addToCart = async (itemId, size) => {
 
     if(!size){
       toast.error("Please select a Product size");
       return
     }
-    // let cartData = {...cartItems};
+    //  let cartData = {...cartItems};
     let cartData = structuredClone(cartItems);
+
 
     if(cartData[itemId]){
       if(cartData[itemId][size]){
@@ -55,6 +58,7 @@ const ShopContextProvider = (props) => {
   const getCartCount = () => {
 
     let totalCount = 0;
+
     for (const key in cartItems) {
       for (const size in cartItems[key]) {
        try{
@@ -96,6 +100,11 @@ const ShopContextProvider = (props) => {
     for(const items in cartItems){
 
       let itemInfo = products.find(product =>  product._id === items);
+
+      if (!itemInfo) {
+        console.warn(`Product with ID ${items} not found in products array.`);
+        continue; // Skip to the next item if not found
+    }
 
       for(const size in cartItems[items]){
 

@@ -23,7 +23,7 @@ const Product = () => {
      }
    })
   }
-
+ 
   useEffect(() => {
     fetchProductData();
   }, [productId, products]);

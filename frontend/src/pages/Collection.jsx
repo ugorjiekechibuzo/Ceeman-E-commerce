@@ -33,17 +33,22 @@ const Collection = () => {
     let productsCopy = [...products];
     //  let productsCopy = products.slice();
 
+    // Filter products based on search input
     if(showSearch && search){
       productsCopy = productsCopy.filter(item => item.name.toLowerCase().includes(search.toLowerCase()));
     }
+
+    // Filter products based on selected categories
     if(category.length > 0){
       productsCopy = productsCopy.filter(item => category.includes(item.category));
     }
 
+    // Filter products based on selected subcategories
     if(subCategory.length > 0){
       productsCopy = productsCopy.filter(item => subCategory.includes(item.subCategory));
     }
 
+    // Update the state with the filtered products
     setFilterProducts(productsCopy);
 
   }
