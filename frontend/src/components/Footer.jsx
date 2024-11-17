@@ -8,7 +8,8 @@ const Footer = () => {
       <div className='flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-14 my-10 mt-40 text-sm'>
 
         <div>
-          <img src={assets.logo} className='mb-5 w-32' alt="" />
+          {/* <img src={assets.logo} className='mb-5 w-32' alt="" /> */}
+          <img src="" className='mb-5 w-32' alt="" />
           <p className='w-full text-gray-600 md:w-2/3 '>
             We believe in sustainability and ethical fashion. That's why we strive to partner with brands and artisans who share our commitment to responsible sourcing and fair trade practices. Every piece in our collection is not just a product; it's a story that reflects craftsmanship, artistry, and a deep respect for our environment.
           </p>
@@ -28,7 +29,7 @@ const Footer = () => {
           <p className='text-xl font-medium mb-5'>GET IN TOUCH</p>
           <ul className='flex flex-col gap-1 text-gray-600'>
             <li>+49-200-2000-00</li>
-            <li>info@nazacollection.com</li>
+            <li>info@nazycollection.com</li>
           </ul>
         </div>
       </div>
