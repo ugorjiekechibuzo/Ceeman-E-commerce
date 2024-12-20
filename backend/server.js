@@ -19,11 +19,13 @@ connectCloundinary();
 // Middlewares
 app.use(express.json()); // allows us to parse json
 app.use(cors({
-  origin: 'https://nazycollection.vercel.app',
+  origin: '*',
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // allows us to make requests from the frontend to the backend
   allowedHeaders: ['Content-Type', 'Authorization'],
 }));  // allows us to make requests from the frontend to the backend
+
+app.use(cors());
 
 // api endpoints
 app.use('/api/user', userRouter);
