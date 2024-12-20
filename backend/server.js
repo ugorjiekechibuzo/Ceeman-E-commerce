@@ -20,7 +20,7 @@ connectCloundinary();
 app.use(express.json()); // allows us to parse json
 app.use(cors({
   origin: '*',
-  // credentials: true,
+  credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // allows us to make requests from the frontend to the backend
   allowedHeaders: ['Content-Type', 'Authorization'],
 }));  // allows us to make requests from the frontend to the backend
