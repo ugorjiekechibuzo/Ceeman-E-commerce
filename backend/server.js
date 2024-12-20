@@ -28,7 +28,7 @@ app.use(express.json());
 // CORS configuration
 app.use(
   cors({
-    origin: "https://nazycollection.vercel.app", // Replace with your frontend's URL
+    origin: ["http://localhost:5173", "https://nazycollection.vercel.app"], // Replace with your frontend's URL
     credentials: true, // Allow cookies and credentials
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], // Supported HTTP methods
     allowedHeaders: ["Content-Type", "Authorization"], // Allowed request headers
@@ -59,4 +59,4 @@ app.use((err, req, res, next) => {
 });
 
 // Listener
-app.listen(port, () => console.log(`Listening on http://localhost:${port}`)),
+app.listen(port, () => console.log(`Listening on http://localhost:${port}`))
