@@ -25,7 +25,7 @@ app.use(cors({
   allowedHeaders: ['Content-Type', 'Authorization'],
 }));  // allows us to make requests from the frontend to the backend
 
-app.use(cors());
+// app.use(cors());
 
 // api endpoints
 app.use('/api/user', userRouter);
