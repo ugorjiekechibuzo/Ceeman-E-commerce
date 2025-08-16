@@ -30,7 +30,7 @@ app.use(
   cors({
     origin: process.env.NODE_ENV || "http://localhost:5173",
     //origin: ["http://localhost:5173", "https://nazycollection.vercel.app"], // Replace with your frontend's URL
-    credentials: true, // Allow cookies and credentials
+    //credentials: true, // Allow cookies and credentials
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], // Supported HTTP methods
     allowedHeaders: ["Content-Type", "Authorization"], // Allowed request headers
   })
