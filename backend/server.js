@@ -51,7 +51,8 @@ app.use("/api/cart", cartRouter);
 app.use("/api/order", orderRouter);
 
 // Root endpoint
-app.get("/", (req, res) => res.status(200).send("Hello World"));
+//app.get("/", (req, res) => res.status(200).send("Hello World"));
+app.get("/", (req, res) => res.status(200).send(process.env));
 
 // Global error handler (optional but recommended)
 app.use((err, req, res, next) => {
