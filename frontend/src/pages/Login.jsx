@@ -70,7 +70,7 @@ const Login = () => {
         }
       </div>
 
-      <button className='w-full py-2 px-8 mt-4 bg-black text-white font-medium'>{currentUser === "Login" ? "Sign In" : "Sign Up"}</button>
+      <button type='submit' className='w-full py-2 px-8 mt-4 bg-black text-white font-medium'>{currentUser === "Login" ? "Sign In" : "Sign Up"}</button>
     </form>
   )
 }
