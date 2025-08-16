@@ -90,12 +90,16 @@ const PlaceOrder = () => {
         items: orderItems,
         amount: getCartAmount() + delivery_fee
       }
+      console.log("Submitting order with data:", orderData, "payment method:", method);
+
 
       switch (method) {
 
         //API Calls on COD
         case "cod":{
           const response = await axios.post(`${backendUrl}/api/order/place`, orderData, {headers: {token}});
+          console.log("COD response", response.data);
+
 
           if (response.data.success) {
             setCartItems({});
@@ -107,6 +111,8 @@ const PlaceOrder = () => {
           break;
         case "stripe":{
           const responseStripe =await axios.post(`${backendUrl}/api/order/stripe`, orderData, {headers: {token}});
+          console.log("Stripe response", responseStripe.data);
+
 
           if(responseStripe.data.success){
             const {session_url} = responseStripe.data
@@ -120,6 +126,7 @@ const PlaceOrder = () => {
 
         case "razorpay":{
           const responseRazorpay = await axios.post(`${backendUrl}/api/order/razorpay`, orderData, {headers: {token}});
+          console.log("Razorpay response", responseRazorpay.data);
 
           if(responseRazorpay.data.success){
            initPayment(responseRazorpay.data.order);
